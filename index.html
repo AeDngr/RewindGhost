@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RewindGhost</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="ui-container">
+    <!-- 메인 메뉴 -->
+    <div id="main-menu" class="glow-box">
+      <h1 class="glow-text">REWIND GHOST</h1>
+      <p class="desc">고스트와 함께 협동하여 탈출하세요</p>
+      <button class="glow-btn" id="btn-start">게임 시작</button>
+      <button class="glow-btn" id="btn-settings">설정</button>
+    </div>
+
+    <!-- 스테이지 선택 -->
+    <div id="stage-menu" class="glow-box" style="display: none;">
+      <h2 class="glow-text">STAGE SELECT</h2>
+      <div class="grid-select" id="stage-buttons"></div>
+      <button class="glow-btn" id="btn-back">뒤로가기</button>
+    </div>
+
+    <!-- 설정 -->
+    <div id="settings-menu" class="glow-box" style="display: none;">
+      <h2 class="glow-text">SETTINGS</h2>
+      <button class="glow-btn hard" id="btn-reset">진행 데이터 초기화</button><br>
+      <button class="glow-btn" id="btn-close-settings">닫기</button>
+    </div>
+
+    <!-- 게임 HUD -->
+    <div id="hud" style="display: none;">
+      <div id="hud-info" class="glow-box info-panel">
+        <div>STAGE <span id="hud-stage">1</span></div>
+        <div>TIME: <span id="hud-timer">0.0</span>s</div>
+      </div>
+      <div class="hud-controls">
+        <button class="glow-btn" id="btn-rewind">R: 리와인드 (고스트 생성)</button>
+        <button class="glow-btn" id="btn-restart">RESTART</button>
+        <button class="glow-btn" id="btn-exit">EXIT</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
