@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #050811;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#ui-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.glow-box {
+  background: rgba(10, 15, 30, 0.92);
+  border: 2px solid #00f3ff;
+  box-shadow: 0 0 15px #00f3ff, inset 0 0 15px #00f3ff;
+  color: #fff;
+  border-radius: 8px;
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  min-width: 320px;
+}
+
+.desc {
+  color: #8a99ad;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.glow-btn {
+  background: transparent;
+  border: 1px solid #00f3ff;
+  color: #00f3ff;
+  padding: 10px 20px;
+  margin: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00f3ff;
+  box-shadow: 0 0 10px #00f3ff;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+}
+
+.glow-btn:hover:not(:disabled) {
+  background: #00f3ff;
+  color: #000;
+  box-shadow: 0 0 20px #00f3ff;
+}
+
+.glow-btn.hard {
+  border-color: #ff0055;
+  color: #ff0055;
+  box-shadow: 0 0 10px #ff0055;
+  text-shadow: 0 0 5px #ff0055;
+}
+
+.glow-btn.hard:hover:not(:disabled) {
+  background: #ff0055;
+  color: #000;
+  box-shadow: 0 0 20px #ff0055;
+}
+
+.glow-btn.cleared {
+  background: rgba(0, 255, 102, 0.15);
+  border-color: #00ff66;
+  color: #00ff66;
+  box-shadow: 0 0 10px #00ff66;
+  text-shadow: 0 0 5px #00ff66;
+}
+
+.glow-btn:disabled {
+  border-color: #444;
+  color: #444;
+  box-shadow: none;
+  text-shadow: none;
+  cursor: not-allowed;
+}
+
+.glow-text {
+  text-shadow: 0 0 8px #00f3ff;
+  color: #00f3ff;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.grid-select {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#hud {
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.info-panel {
+  top: 20px !important;
+  left: 20px !important;
+  transform: none !important;
+  padding: 10px 20px !important;
+  min-width: auto !important;
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.hud-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  pointer-events: auto;
+  }
