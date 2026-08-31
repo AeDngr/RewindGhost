@@ -1,2 +1,0 @@
-# RewindGhost
-Past
